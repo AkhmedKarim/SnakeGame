@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{5B9EACF0-3949-E301-1DCD-D315DB3FC123}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Snake/SnakeHead.cs">
+    <Files>
+      <File FileName="Assets/Scripts/NewClass.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/SceneManager/NewClass.cs" Line="7" Column="19" />
+      <File FileName="Assets/Scripts/MainMenu/MainMenuBehaviour.cs" Line="25" Column="9" />
+      <File FileName="Assets/Scripts/NewClass.cs" Line="9" Column="3" />
+      <File FileName="Assets/Scripts/Menu/NewClass.cs" Line="31" Column="48" />
+      <File FileName="Assets/Scripts/Menu/NewClass.cs" Line="1" Column="19" />
+      <File FileName="Assets/Scripts/Menu/ChildMenu/NewClass.cs" Line="7" Column="28" />
+      <File FileName="Assets/Scripts/NewClass.cs" Line="10" Column="6" />
+      <File FileName="Assets/Scripts/NewMonoBehaviour.cs" Line="7" Column="14" />
+      <File FileName="Assets/Scripts/Snake/NewMonoBehaviour.cs" Line="9" Column="25" />
+      <File FileName="Assets/Scripts/Snake/NewClass.cs" Line="23" Column="64" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GameSnake" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Menu" expanded="True" />
+                <Node name="Snake" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b9f2a9a3-6a96-43b5-bd6c-5db2596af034" />
+</Properties>
