@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,14 @@ public class MainMenuBehaviour : MonoBehaviour
     DifficultySelectionMenu difficultySelectionMenu;
     SettingMenu settingMenu;
     InteractebleMenu interactebleMenu;
+    ScoresPanel scoresPanel;
 
+    
+
+    private void Awake()
+    {
+        
+    }
 
     void Start()
     {
@@ -28,13 +36,18 @@ public class MainMenuBehaviour : MonoBehaviour
         interactebleMenu.noButton.onClick.AddListener(()=> CloseWindow());
         interactebleMenu.SetActive(false);
 
+        scoresPanel = new ScoresPanel(GameObject.Find("ScorePanel"));
+        scoresPanel.Reload();
+
         SetupBlurPanel();
-        SetupButton();
+        SetupButtons();
     }
+
+
 
     void Update()
     {
-        Debug.Log(SoundManager.Volume);
+       
     }
 
     void SetupBlurPanel()
@@ -46,7 +59,7 @@ public class MainMenuBehaviour : MonoBehaviour
         blurPanel.gameObject.SetActive(false);
     }
 
-    void SetupButton()
+    void SetupButtons()
     {
         playButtun = transform.Find("PlayButton").GetComponent<Button>();
         quitButtun = transform.Find("QuitButton").GetComponent<Button>();
@@ -61,6 +74,7 @@ public class MainMenuBehaviour : MonoBehaviour
         settingButtun.onClick.AddListener(() =>
             OpenWindow(settingMenu)
         );
+        
     }
 
     void OpenWindow(ChildMenu childMenu)
@@ -75,3 +89,5 @@ public class MainMenuBehaviour : MonoBehaviour
         blurPanel?.gameObject.SetActive(false);
     }
 }
+
+

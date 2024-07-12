@@ -9,7 +9,7 @@ public abstract class ChildMenu
         instanse = menu;
     }
 
-    public void SetActive(bool active)
+    public virtual void SetActive(bool active)
     {
         instanse.SetActive(active);
     }

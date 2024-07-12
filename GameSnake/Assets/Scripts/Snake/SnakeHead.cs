@@ -2,25 +2,42 @@
 using UnityEngine;
 public class SnakeHead
 {
-	GameObject head;
-    Vector2Int currentDirection;
+    SnakeBehaviour snakeHandler;
 
-    public SnakeHead(GameObject snake)
+    SnakeDirection _currentDirection;
+    SnakeDirection _newDirection;
+    public SnakeDirection InputDirection { get => _newDirection; }//ShDirection - це напрям який обрав гравець, якщо гравець в моменті змінить напрям, то і ця змінна зміниться бистріше а ніж змінеться справжній наврям змії. Спавжній напрям це - _currentDirection
+
+
+    public SnakeHead(SnakeBehaviour snakeHandler)
     {
-        head = snake;
-        TryChangeDirection(new Vector2Int(1, 0));
+        this.snakeHandler = snakeHandler;
+
+        _newDirection = _currentDirection = SnakeDirection.Right;
     }
 
     public void Move()
     {
-        head.transform.position += (Vector3)(Vector2)currentDirection;
+        _currentDirection =_newDirection ;
+
+        float angle = InputDirection.ToAngle();
+
+        snakeHandler.transform.eulerAngles = new Vector3(0, 0, angle);
+        snakeHandler.transform.position += (Vector3)InputDirection.ToVector2();
+
+        snakeHandler.GameField.StayInside(snakeHandler.transform);
     }
 
-    public void TryChangeDirection(Vector2Int direction)
+    public void TryChangeDirection(SnakeDirection direction)
     {
-        currentDirection = direction;
-        float angle = Mathf.Atan2(currentDirection.y, currentDirection.x);
-        head.transform.eulerAngles = new Vector3(0,0,angle - 90);
+        if ((int)_currentDirection % 2 == 0 && (int)direction % 2 == 0 ||//enum SnakeDirection розташований таким чином
+            (int)_currentDirection % 2 != 0 && (int)direction % 2 != 0)
+            return;//якщо новий напрям протилежний попередньому
+
+        _newDirection = direction;
     }
+
 }
+    
+
 
