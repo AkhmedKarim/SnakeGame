@@ -32,7 +32,8 @@ public class FoodBehaviour : MonoBehaviour
 
         newFood.FoodHasBeenEaten += (Food food) => {
             gameField.GameUI.AddScore(food.Points);
-            Destroy(food.gameObject);
+            //Destroy(food.gameObject);
+            //food.
             SpawnApple();
         };
     }

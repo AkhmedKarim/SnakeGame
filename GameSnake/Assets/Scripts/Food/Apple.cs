@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class Apple : Food
 {
@@ -19,6 +20,25 @@ public class Apple : Food
             }
         }
     }
+
+    public override void Eated()
+    {
+        base.Eated();
+
+        StartCoroutine(DestroyAfterSoundPlayd());
+    }
+
     
+
+    public IEnumerator DestroyAfterSoundPlayd()
+    {
+        Destroy(GetComponent<SpriteRenderer>());
+        GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(GetComponent<AudioSource>().clip.length);
+        Destroy(gameObject);
+    }
+
+
+
 }
 

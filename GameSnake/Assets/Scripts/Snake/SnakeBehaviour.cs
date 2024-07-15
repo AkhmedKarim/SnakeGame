@@ -4,6 +4,7 @@ using UnityEngine.Events;
 
 public class SnakeBehaviour : MonoBehaviour
 {
+    [SerializeField] AudioClip deadSound;
     public UnityAction SnakeDead;
 
     SnakeHead snakeHead;
@@ -82,6 +83,12 @@ public class SnakeBehaviour : MonoBehaviour
             {
                 SnakeDead.Invoke();
                 isAlive = false;
+
+                {//playSoundFunc
+                    var sourse = GetComponent<AudioSource>();
+                    sourse.clip = deadSound;
+                    sourse.Play();
+                }
             }
         }
 		moveTimer += Time.deltaTime;

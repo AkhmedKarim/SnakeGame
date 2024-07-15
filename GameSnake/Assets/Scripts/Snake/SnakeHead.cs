@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 public class SnakeHead
 {
     SnakeBehaviour snakeHandler;
@@ -26,6 +25,8 @@ public class SnakeHead
         snakeHandler.transform.position += (Vector3)InputDirection.ToVector2();
 
         snakeHandler.GameField.StayInside(snakeHandler.transform);
+
+        PlayStepSound();
     }
 
     public void TryChangeDirection(SnakeDirection direction)
@@ -35,6 +36,13 @@ public class SnakeHead
             return;//якщо новий напрям протилежний попередньому
 
         _newDirection = direction;
+    }
+
+    void PlayStepSound()
+    {
+        var audioSource = snakeHandler.GetComponent<AudioSource>();
+        audioSource.pitch = Random.Range(0.8f, 1.15f);
+        audioSource.Play();
     }
 
 }

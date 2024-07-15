@@ -38,11 +38,18 @@ public class GameUI
             else
                 settingsWindow.SetActive(true);
         }
-        //if (Input.GetKeyUp(KeyCode.Escape))
-        //{
-            
-        //}
+
+
+        if (waitForSomeKey2endGame)
+        {
+            if (Input.anyKey)
+            {
+                SceneLoader.Load(SceneLoader.Scene.MainMenu);
+            }
+        }
     }
+
+    bool waitForSomeKey2endGame = false;
 
     void SetupNewScoreWindow(in Transform canvas)
     {
@@ -82,7 +89,7 @@ public class GameUI
             }
             else
             {
-                SceneLoader.Load(SceneLoader.Scene.MainMenu);
+                waitForSomeKey2endGame = true;
             }
         };
     }

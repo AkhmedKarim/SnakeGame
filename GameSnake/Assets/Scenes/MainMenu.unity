@@ -2757,6 +2757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 4940290211345012770, guid: 51ebabec76e6d4ed3b3f3a3c5b1a72a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4940290211345012771, guid: 51ebabec76e6d4ed3b3f3a3c5b1a72a1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

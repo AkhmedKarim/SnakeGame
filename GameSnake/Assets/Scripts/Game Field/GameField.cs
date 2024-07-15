@@ -66,30 +66,9 @@ public class GameField : MonoBehaviour,
 
     void Update()
     {
-        //StayInsideField(snake?.transform);
         gameUI.Update();
     }
 
-    //void StayInsideField(Transform obj)
-    //{
-    //    if (obj.position.x >= FIELD_WIDTH)
-    //    {
-    //        obj.position = new Vector3(0, obj.position.y, obj.position.z);
-    //    }
-    //    else if (obj.position.x < 0)
-    //    {
-    //        obj.position = new Vector3(FIELD_WIDTH - 1, obj.position.y, obj.position.z);
-    //    }
-
-    //    if (obj.position.y >= FIELD_HEGHT)
-    //    {
-    //        obj.position = new Vector3(obj.position.x, 0, obj.position.z);
-    //    }
-    //    else if (obj.position.y < 0)
-    //    {
-    //        obj.position = new Vector3(obj.position.x, FIELD_HEGHT - 1, obj.position.z);
-    //    }
-    //}
     public void StayInside(Transform obj)
     {
         if (obj.position.x >= FIELD_WIDTH)
@@ -167,13 +146,7 @@ public class GameField : MonoBehaviour,
         {
             foodList.Remove(food);
         }
-        //else if (@object.TryGetComponent(out FoodBehaviour foodSpawner))
-        //{
-        //    if (this.foodSpawner != null)
-        //    {
-        //        foodSpawner = null;
-        //    }
-        //}
+      
         else
         {
             gameObjectList.Remove(@object);

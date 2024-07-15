@@ -274,10 +274,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 2565390422910935476}
   m_HandleRect: {fileID: 2565390421909717224}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: -80
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c73a137559754c1599ede78d06fe5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixerGroup: {fileID: 24300002, guid: 9b2822008695a4873aec403e6ba878d9, type: 2}
 --- !u!1 &2565390422910935483
 GameObject:
   m_ObjectHideFlags: 0
