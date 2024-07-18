@@ -1022,7 +1022,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 7481244792526122959, guid: 9b2822008695a4873aec403e6ba878d9, type: 2}
   m_audioClip: {fileID: 8300000, guid: 8c7f60359df47464b8fc67d90745a2db, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.68
+  m_Volume: 0.257
   m_Pitch: 0.14
   Loop: 0
   Mute: 0
@@ -1449,7 +1449,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'High Score: 239427349234'
 --- !u!222 &1613160218
@@ -2098,7 +2098,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Score: 100'
 --- !u!222 &2094880649

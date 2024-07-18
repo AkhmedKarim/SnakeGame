@@ -16,7 +16,6 @@ public class MainMenuBehaviour : MonoBehaviour
     InteractebleMenu interactebleMenu;
     ScoresPanel scoresPanel;
 
-    
 
     private void Awake()
     {
@@ -30,7 +29,6 @@ public class MainMenuBehaviour : MonoBehaviour
         difficultySelectionMenu.SetActive(false);
 
         settingMenu = new SettingMenu(GameObject.Find("SettingsWindow"));
-        settingMenu.SetActive(false);
 
         interactebleMenu = new InteractebleMenu(GameObject.Find("InteractebleWindow"));
         interactebleMenu.noButton.onClick.AddListener(()=> CloseWindow());
@@ -44,11 +42,6 @@ public class MainMenuBehaviour : MonoBehaviour
     }
 
 
-
-    void Update()
-    {
-       
-    }
 
     void SetupBlurPanel()
     {
@@ -74,7 +67,6 @@ public class MainMenuBehaviour : MonoBehaviour
         settingButtun.onClick.AddListener(() =>
             OpenWindow(settingMenu)
         );
-        
     }
 
     void OpenWindow(ChildMenu childMenu)

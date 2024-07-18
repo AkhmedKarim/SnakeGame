@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System;
+using UnityEngine.UIElements;
 
 public class GameUI
 {
@@ -89,9 +92,17 @@ public class GameUI
             }
             else
             {
-                waitForSomeKey2endGame = true;
+                gameField.transform.GetComponent<GameField>().StartCoroutine(HoldOn());
+                //waitForSomeKey2endGame = true;
             }
         };
+    }
+
+
+    IEnumerator HoldOn()
+    {
+        yield return new WaitForSeconds(1.3f);
+        waitForSomeKey2endGame = true;
     }
 }
 
