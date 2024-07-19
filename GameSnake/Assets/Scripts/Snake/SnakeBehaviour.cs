@@ -38,7 +38,6 @@ public class SnakeBehaviour : MonoBehaviour
 
     void Start()
 	{
-        Debug.Log(ScoreHandler.scoresFilePath);
         gameField = GameObject.Find("Game Field").GetComponent<GameField>();
         gameField.PlaceOnField(gameObject);
 
@@ -81,14 +80,14 @@ public class SnakeBehaviour : MonoBehaviour
 
             if (IsSnakeEateSelf())
             {
-                SnakeDead.Invoke();
-                isAlive = false;
-
                 {//playSoundFunc
                     var sourse = GetComponent<AudioSource>();
                     sourse.clip = deadSound;
                     sourse.Play();
                 }
+                isAlive = false;
+
+                SnakeDead.Invoke();
             }
         }
 		moveTimer += Time.deltaTime;

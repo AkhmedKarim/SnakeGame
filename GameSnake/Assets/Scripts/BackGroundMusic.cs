@@ -28,13 +28,15 @@ public class BackGroundMusic : MonoBehaviour
 		switch (DifficultController.currentDifficult)
 		{
 			default:
-			case  DifficultController.Difficult.Easy:
-					case DifficultController.Difficult.Medium:
-					return audioClips[0];
-			case DifficultController.Difficult.Hard:
-				return audioClips[1];
+			case DifficultController.Difficult.Easy:
+			case DifficultController.Difficult.Medium:
+				source.volume = 1;
+				return audioClips[0];
 
-        }
+			case DifficultController.Difficult.Hard:
+				source.volume = .4f;
+				return audioClips[1];
+		}
 	}
 }
 

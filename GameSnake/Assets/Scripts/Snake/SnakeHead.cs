@@ -26,7 +26,7 @@ public class SnakeHead
 
         snakeHandler.GameField.StayInside(snakeHandler.transform);
 
-        PlayStepSound();
+       // PlayStepSound();
     }
 
     public void TryChangeDirection(SnakeDirection direction)
@@ -38,12 +38,12 @@ public class SnakeHead
         _newDirection = direction;
     }
 
-    void PlayStepSound()
-    {
-        var audioSource = snakeHandler.GetComponent<AudioSource>();
-        audioSource.pitch = Random.Range(0.8f, 1.15f);
-        audioSource.Play();
-    }
+    //void PlayStepSound()
+    //{
+    //    var audioSource = snakeHandler.GetComponent<AudioSource>();
+    //    audioSource.pitch = Random.Range(0.8f, 1.15f);
+    //    audioSource.Play();
+    //}
 
 }
     

@@ -47,6 +47,7 @@ public class GameUI
         {
             if (Input.anyKey)
             {
+                waitForSomeKey2endGame = false;
                 SceneLoader.Load(SceneLoader.Scene.MainMenu);
             }
         }

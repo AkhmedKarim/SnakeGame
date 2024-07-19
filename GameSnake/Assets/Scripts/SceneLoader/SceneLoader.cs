@@ -1,6 +1,5 @@
-﻿using System;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine;
 
 public static class SceneLoader
 {
@@ -10,13 +9,27 @@ public static class SceneLoader
 		Game
 	}
 
-	public static void Load(Scene scene)
+	public static LoadingSceneBehaviour loadingSceneBehaviour;
+
+    public static void Load(Scene scene)
 	{
-		SceneManager.LoadScene(scene.ToString());
+        loadingSceneBehaviour = GameObject.Find("LoadingScene")?.GetComponent<LoadingSceneBehaviour>();
+
+		if (loadingSceneBehaviour != null)
+		{
+            loadingSceneBehaviour.LoadingScen(scene);
+            loadingSceneBehaviour = null;
+            return;
+		}
+
+        SceneManager.LoadScene(scene.ToString());
+
     }
 	public static void CloseAllGame()
 	{
 		Application.Quit();
 	}
+
+	
 }
 
